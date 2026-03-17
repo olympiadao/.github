@@ -123,7 +123,7 @@ Olympia is grounded in Ethereum Classic's founding principles:
 - [OlympiaTreasury.org](https://olympiatreasury.org) — Treasury monitoring
 - [Governance App](https://app.olympiadao.org) — Proposal submission, voting, and execution
 - [ECIPs 1111–1122](https://github.com/ethereumclassic/ECIPs) — Ethereum Classic Improvement Proposals
-- [ETC Discord](https://discord.gg/ethereumclassic) — Community discussion
+- [ETC Discord](https://ethereumclassic.org/discord) — Community discussion
 
 ---
 
