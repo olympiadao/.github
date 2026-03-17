@@ -16,15 +16,15 @@ Olympia is a multi-phase protocol upgrade for Ethereum Classic defined by 11 ECI
 - **ECIP-1121**: EVM compatibility sprint — 15 EIPs including MCOPY, transient storage, BLS12-381, and EOA delegation
 
 **Stage 2 — Governance (In Progress)**
-- **ECIP-1113**: CoreDAO governance framework — Governor, Timelock, Executor pipeline with NFT-based voting
-- **ECIP-1114**: ECFP funding proposal process — permissionless, hash-bound proposal registry
+- **ECIP-1113**: CoreDAO governance framework — Governor, Timelock, Executor with NFT-based voting
+- **ECIP-1114**: ECFP funding proposal process — permissionless proposal registry
 - **ECIP-1119**: Sanctions constraint — three-layer defense at proposal, lifecycle, and execution layers
 
 **Stage 3 — Experimental Governance (Planned)**
 - **ECIP-1117**: Futarchy DAO — prediction market governance with conditional outcome markets
 - **ECIP-1118**: Streaming disbursements — milestone-gated fund releases with governance-authorized clawback
 
-**Stage 4 — Miner Distribution (Planned)**
+**Stage 4 — Miner Distribution Exploration (Planned)**
 - **ECIP-1115**: L-curve smoothing — governance-controlled miner incentive reshaping
 
 **Stage 5 — Protocol Hardcode (Deferred)**
@@ -76,7 +76,7 @@ Cross-client verification completed March 2026. All three clients produce identi
 
 ---
 
-## Deployed Contracts (Mordor Testnet)
+## Deployed Contracts (Mordor Testnet — Demo v0.1)
 
 | Contract | Address |
 |----------|---------|
@@ -110,13 +110,18 @@ Olympia is grounded in Ethereum Classic's founding principles:
 | [olympia-treasury-contract](https://github.com/olympiadao/olympia-treasury-contract) | Treasury vault contract |
 | [olympia-app](https://github.com/olympiadao/olympia-app) | Governance web application |
 | [olympia-brand](https://github.com/olympiadao/olympia-brand) | Logo, design tokens, brand assets |
+| [olympiadao-org](https://github.com/olympiadao/olympiadao-org) | Project landing page — olympiadao.org |
+| [olympiatreasury-org](https://github.com/olympiadao/olympiatreasury-org) | Treasury dashboard — olympiatreasury.org |
+| [ethereumclassicdao-org](https://github.com/EthereumClassicDAO/ethereumclassicdao-org) | DAO LLC corporate website — ethereumclassicdao.org |
 
 ---
 
 ## Resources
 
+- [EthereumClassicDAO.org](https://ethereumclassicdao.org) — DAO LLC corporate website
 - [OlympiaDAO.org](https://olympiadao.org) — Project overview and status
 - [OlympiaTreasury.org](https://olympiatreasury.org) — Treasury monitoring
+- [Governance App](https://app.olympiadao.org) — Proposal submission, voting, and execution
 - [ECIPs 1111–1122](https://github.com/ethereumclassic/ECIPs) — Ethereum Classic Improvement Proposals
 - [ETC Discord](https://discord.gg/ethereumclassic) — Community discussion
 
