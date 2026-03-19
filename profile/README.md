@@ -1,6 +1,6 @@
 # Olympia — Protocol-Native Treasury for Ethereum Classic
 
-> **Demo v0.2** — Olympia ECIP spec compliant. Deployed for live Mordor and ETC mainnet development testing. Pre-Olympia EVM (Shanghai), OpenZeppelin v5.1.0. Not production.
+> **Demo v0.2** — Olympia ECIP spec compliant. Deployed for live Mordor and ETC mainnet development testing. Pre-Olympia EVM (Shanghai), OpenZeppelin v5.1.0 (governance). Production deployment pending Olympia hard fork activation.
 
 Olympia introduces a native treasury system to Ethereum Classic — transparent, on-chain funding for public goods, infrastructure, and ecosystem growth. No new inflation. No upgrade keys. Governed by soulbound NFT membership.
 
