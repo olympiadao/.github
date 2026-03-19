@@ -1,6 +1,6 @@
 # Olympia — Protocol-Native Treasury for Ethereum Classic
 
-> Sustainable, decentralized funding governed by code, not committees.
+> **Demo v0.2** — Olympia ECIP spec compliant. Deployed for live Mordor and ETC mainnet development testing. Pre-Olympia EVM (Shanghai), OpenZeppelin v5.1.0. Not production.
 
 Olympia introduces a native treasury system to Ethereum Classic — transparent, on-chain funding for public goods, infrastructure, and ecosystem growth. No new inflation. No admin keys. No gatekeepers.
 
@@ -18,8 +18,8 @@ EIP-1559 basefee revenue flows to an immutable on-chain Treasury. Governance NFT
 
 | Stage | Focus | Status |
 |-------|-------|--------|
-| **1 — Hard Fork** | EIP-1559 activation, Treasury deployment, EVM compatibility (15 EIPs) | Implemented across 3 clients |
-| **2 — Governance** | Governor, funding proposals, sanctions compliance | Deployed to Mordor + ETC mainnet |
+| **1 — Hard Fork** | EIP-1559 activation, Treasury deployment, EVM compatibility (15 EIPs) | Implemented across 3 clients, activation block TBD |
+| **2 — Governance** | Governor, funding proposals, sanctions compliance | Demo v0.2 deployed to Mordor + ETC mainnet |
 | **3 — Futarchy** | Prediction market governance, streaming disbursements | Research complete |
 | **4 — Miner Distribution** | L-curve smoothing for miner incentives | Spec written |
 | **5 — Protocol Hardcode** | Embed validated parameters at consensus layer | Deferred |
@@ -45,7 +45,23 @@ All three produce identical Treasury balances and agree on every consensus-criti
 
 ---
 
-## Deployed Contracts
+## Current Status
+
+All repositories use a three-branch development model:
+
+| Branch | Purpose | EVM | OpenZeppelin | Status |
+|--------|---------|-----|-------------|--------|
+| `demo_v0.1` | Early scaffolding, fast iteration | Shanghai | v5.1.0 (governance) | Archived snapshot |
+| **`demo_v0.2`** | **ECIP spec-compliant testing** | **Shanghai** | **v5.1.0 (governance)** | **Active — deployed to Mordor + ETC mainnet** |
+| `main` | Production target | Cancun (post-Olympia) | v5.6.0 (governance) | Drafted — deploys after Olympia hard fork activates |
+
+**`demo_v0.2` is the active development branch across all repositories.** It runs on the current pre-Olympia EVM (Shanghai) and is deployed to both Mordor testnet and ETC mainnet for live governance testing. The Treasury contract is pure Solidity with no external dependencies — identical bytecode across all branches.
+
+The `main` branch targets the post-Olympia EVM (Cancun with MCOPY, transient storage, etc.) and will be activated after the Olympia hard fork. It uses OpenZeppelin v5.6.0, which requires Cancun opcodes unavailable on the current EVM.
+
+---
+
+## Deployed Contracts (Demo v0.2)
 
 Identical addresses on Mordor testnet and ETC mainnet (deterministic CREATE2 deployment).
 
