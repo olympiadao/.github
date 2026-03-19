@@ -2,15 +2,23 @@
 
 > **Demo v0.2** — Olympia ECIP spec compliant. Deployed for live Mordor and ETC mainnet development testing. Pre-Olympia EVM (Shanghai), OpenZeppelin v5.1.0. Not production.
 
-Olympia introduces a native treasury system to Ethereum Classic — transparent, on-chain funding for public goods, infrastructure, and ecosystem growth. No new inflation. No admin keys. No gatekeepers.
+Olympia introduces a native treasury system to Ethereum Classic — transparent, on-chain funding for public goods, infrastructure, and ecosystem growth. No new inflation. No upgrade keys. Governed by soulbound NFT membership.
 
 ---
 
 ## How It Works
 
-EIP-1559 basefee revenue flows to an immutable on-chain Treasury. Governance NFT holders submit proposals, vote, and execute withdrawals through a timelock-protected pipeline. Three layers of sanctions compliance are enforced at the contract level.
+EIP-1559 basefee revenue flows to an immutable on-chain Treasury. Any ETC address can submit funding proposals through the [ECFPRegistry](https://ecips.ethereumclassic.org/ECIPs/ecip-1114). Soulbound NFT holders review, vote, and govern withdrawals through a timelock-protected pipeline with three layers of [sanctions compliance](https://ecips.ethereumclassic.org/ECIPs/ecip-1119).
 
 **Miners are untouched.** Olympia uses basefee that would otherwise be burned — block rewards remain exactly as they are today.
+
+**Governance pipeline:**
+
+1. **Submit** — Any ETC address submits a funding proposal to the ECFPRegistry (permissionless)
+2. **Review** — Draft enters a minimum review period before activation
+3. **Vote** — Soulbound NFT holders vote via OlympiaGovernor (1 NFT = 1 vote)
+4. **Queue** — Approved proposals enter a timelock delay
+5. **Execute** — OlympiaExecutor withdraws from Treasury with a final sanctions check
 
 ---
 
@@ -18,11 +26,11 @@ EIP-1559 basefee revenue flows to an immutable on-chain Treasury. Governance NFT
 
 | Stage | Focus | Status |
 |-------|-------|--------|
-| **1 — Hard Fork** | EIP-1559 activation, Treasury deployment, EVM compatibility (15 EIPs) | Implemented across 3 clients, activation block TBD |
-| **2 — Governance** | Governor, funding proposals, sanctions compliance | Demo v0.2 deployed to Mordor + ETC mainnet |
-| **3 — Futarchy** | Prediction market governance, streaming disbursements | Research complete |
-| **4 — Miner Distribution** | L-curve smoothing for miner incentives | Spec written |
-| **5 — Protocol Hardcode** | Embed validated parameters at consensus layer | Deferred |
+| **1 — Hard Fork** | [EIP-1559 activation](https://ecips.ethereumclassic.org/ECIPs/ecip-1111), [Treasury deployment](https://ecips.ethereumclassic.org/ECIPs/ecip-1112), [EVM compatibility](https://ecips.ethereumclassic.org/ECIPs/ecip-1121) (15 EIPs) | Implemented across 3 clients, activation block TBD |
+| **2 — Governance** | [Governor](https://ecips.ethereumclassic.org/ECIPs/ecip-1113), [funding proposals](https://ecips.ethereumclassic.org/ECIPs/ecip-1114), [sanctions compliance](https://ecips.ethereumclassic.org/ECIPs/ecip-1119) | Demo v0.2 deployed to Mordor + ETC mainnet |
+| **3 — Futarchy** | [Prediction market governance](https://ecips.ethereumclassic.org/ECIPs/ecip-1117), [streaming disbursements](https://ecips.ethereumclassic.org/ECIPs/ecip-1118) | Research complete |
+| **4 — Miner Distribution** | [L-curve smoothing](https://ecips.ethereumclassic.org/ECIPs/ecip-1115) for miner incentives | Spec written |
+| **5 — Protocol Hardcode** | [Basefee split](https://ecips.ethereumclassic.org/ECIPs/ecip-1116), [miner distribution curve](https://ecips.ethereumclassic.org/ECIPs/ecip-1122) at consensus layer | Deferred |
 
 Each stage builds on the operational reality of the previous one. Defined by [11 ECIPs](https://github.com/olympiadao/olympia-framework) (ECIP-1111 through ECIP-1122).
 
@@ -97,7 +105,7 @@ Identical addresses on Mordor testnet and ETC mainnet (deterministic CREATE2 dep
 - **Code is Law** — governance enforced by smart contracts
 - **Immutability is Integrity** — no admin backdoors, no upgrade proxies
 - **Neutrality is Strength** — permissionless participation
-- **Funding is Permissionless** — anyone can propose, anyone can vote
+- **Funding is Permissionless** — anyone can submit proposals, soulbound NFT holders vote
 
 ---
 
